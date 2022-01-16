@@ -26,7 +26,10 @@ class RecentChats extends StatelessWidget {
                           itemBuilder: (BuildContext context,int index){
                             final Message chat=chats[index];
                             return GestureDetector(
-                              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (_)=>ChatScreen(user: chat.sender))),
+                              onTap: ()=>Navigator.push(context, MaterialPageRoute(
+                                builder: (_)=>ChatScreen(user: chat.sender)
+                                )
+                                ),
                               child: Container(
                                 margin: EdgeInsets.only(top: 5.0,bottom: 5.0,right: 20.0),
                                 padding: EdgeInsets.symmetric(horizontal: 20.0,vertical: 10.0),
